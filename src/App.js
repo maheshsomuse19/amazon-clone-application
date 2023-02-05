@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react'
+import Main from './component/main/Main';
 
-function App() {
+// CREATE CONTEXT
+export const StateContext = React.createContext();
+
+// INITIAL DATA STATE
+const initialState={
+  basket:[],
+}
+
+const reducer=(state,action)=>{
+  console.log("ACTION TYPE",action.type);
+  console.log("ACTION PAYLOAD",action.payload);
+  switch(action.type){
+
+   // add item to basket   
+   case 'ADD_TO_BASKET':
+      return {
+        ...state,
+        basket:[...state.basket,action.payload]
+      }
+      break;  
+
+   case 'REMOVE_FROM_BASKET':
+      return {
+        ...state,
+        basket:[...state.basket.filter(item=> item.id !== action.payload.id)]
+      }
+      break;   
+   
+   default:
+      return state;   
+
+  }
+}
+
+const App = () => {
+  const [state,dispatch]=useReducer(reducer,initialState);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateContext.Provider value={{state,dispatch}}>
+    <Main/>
+    </StateContext.Provider>
+
   );
 }
 
