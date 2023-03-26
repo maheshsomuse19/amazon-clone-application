@@ -1,13 +1,30 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext, useEffect, useMemo } from 'react'
 import "./Header.css"
 import { Link } from "react-router-dom"
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { StateContext } from '../../App';
-
-const Header=()=> {
+import { auth } from '../firebase';
+const Header=(props)=> {
+  const [searchText,setSearchText]=useState('')
   const {state}=useContext(StateContext);
-  console.log("STATE",state.basket)
+
+  // const userName = useMemo(()=>state?.user ? state?.user : '',[state?.user])
+  console.log("LOGIN USER",state.user)  
+
+  // const onchangeText = (e)=>{
+  //   setSearchText(e.target.value)
+  // }
+  // props.searchText(searchText)
+  // useEffect(()=>{
+  //   props.searchText(searchText)
+  // },[searchText])
+  
+  const login= ()=>{
+    if(state.user){
+      auth.signOut()
+    }
+  }
   return (
     <nav className="header">
       {/* logo on the left image  */}
@@ -27,9 +44,9 @@ const Header=()=> {
       <div className="header_nav">
         {/* 1st link */}
         <Link to="/login" className="header_link">
-          <div className="header_option">
-            <span className="header_optionLineOne">Hello Mahesh</span>
-            <span className="header_optionLineTwo">Sign In</span>
+          <div onClick={login} className="header_option">
+            <span className="header_optionLineOne">Hello</span>
+            <span className="header_optionLineTwo">{state?.user ? 'Sign Out' :'Sign In'}</span>
           </div>
         </Link>
 

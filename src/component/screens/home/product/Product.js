@@ -3,9 +3,27 @@ import StarIcon from "@mui/icons-material/Star";
 import "./Product.css"
 import { StateContext } from '../../../../App';
 const Product = ({ id, title, image, price, rating }) => {
-
+  const { state } = useContext(StateContext);
   const { dispatch } = useContext(StateContext);
+  const isDuplicateItem = state.basket.filter(item=>{
+    return item.id==id;
+  })
   const addItemToBasket = () => {
+    // Add item to basket...
+    // dispatch({
+    //   type: "ADD_TO_BASKET",
+    //   payload: {
+    //     id:id,
+    //     title:title,
+    //     image:image,
+    //     price:price,
+    //     rating:5,
+    //   }
+    // })
+    if(isDuplicateItem.length > 0){
+      alert("Product is already present")
+    }
+    else{
     // Add item to basket...
     dispatch({
       type: "ADD_TO_BASKET",
@@ -17,6 +35,8 @@ const Product = ({ id, title, image, price, rating }) => {
         rating:5,
       }
     })
+    }  
+
 
 
   }

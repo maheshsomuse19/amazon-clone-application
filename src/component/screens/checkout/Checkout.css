@@ -1,3 +1,12 @@
+.checkout{
+    display: flex;
+    flex-direction: row;
+}
+.checkout_left_section{
+    display: flex;
+    flex-direction: column;
+
+}
 .checkout_ad{
     width: 100%;
 
