@@ -29,8 +29,8 @@ const Header=(props)=> {
     <nav className="header">
       {/* logo on the left image  */}
       <Link to="/login">
-        <img className="header_logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo"></img>
-
+        {/* <img className="header_logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo"></img> */}
+        <h3 className="header_logo">Digital Store</h3>
       </Link>
 
       {/* search box */}

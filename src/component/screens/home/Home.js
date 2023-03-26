@@ -19,7 +19,7 @@ const Home = () => {
   let productData = [
     {
       id: "1232120",
-      title: "Amazon Echo Dot 4th Gen Alexa Built-in Smart",
+      title: "Digital Echo Dot 4th Gen Alexa Built-in Smart",
       price: 89.53,
       rating: 5,
       image: speakerImage,
@@ -27,21 +27,21 @@ const Home = () => {
     },
     {
       id: "1232121",
-      title: "Amazon Brand-Eono PC Gaming Headphones Surround Sound with Boom mic,stereo Sound wired Over Ear Headphones ",
+      title: "Digital Brand-Eono PC Gaming Headphones Surround Sound with Boom mic,stereo Sound wired Over Ear Headphones ",
       price: 25.96,
       rating: 4,
       image: { headfoneImage },
     },
     {
       id: "1232122",
-      title: "Amazon Brand-Solimo Laptop Backpack for 15.6-inch Laptops (27 litres,Black)",
+      title: "Digital Brand-Solimo Laptop Backpack for 15.6-inch Laptops (27 litres,Black)",
       price: 11.96,
       rating: 4,
       image: bagImage,
     },
     {
       id: "1232123",
-      title: "Amazon Brand - Symactive mens walking Shoe",
+      title: "Digital Brand - Symactive mens walking Shoe",
       price: 15.25,
       rating: 3,
       image: shoeImage,
@@ -83,7 +83,7 @@ const Home = () => {
 
           <Product
             id="1232120"
-            title="Amazon Echo Dot 4th Gen Alexa Built-in Smart"
+            title="Digital Echo Dot 4th Gen Alexa Built-in Smart"
             price={89.53}
             rating={5}
             image={speakerImage}
@@ -91,7 +91,7 @@ const Home = () => {
 
           <Product
             id="1232121"
-            title="Amazon Brand-Eono PC Gaming Headphones Surround Sound with Boom mic,stereo Sound wired Over Ear Headphones "
+            title="Digital Brand-Eono PC Gaming Headphones Surround Sound with Boom mic,stereo Sound wired Over Ear Headphones "
             price={25.96}
             rating={4}
             image={headfoneImage}
@@ -103,7 +103,7 @@ const Home = () => {
 
           <Product
             id="1232122"
-            title="Amazon Brand-Solimo Laptop Backpack for 15.6-inch Laptops (27 litres,Black)"
+            title="Digital Brand-Solimo Laptop Backpack for 15.6-inch Laptops (27 litres,Black)"
             price={11.96}
             rating={4}
             image={bagImage}
@@ -111,7 +111,7 @@ const Home = () => {
 
           <Product
             id="1232123"
-            title="Amazon Brand - Symactive mens walking Shoe"
+            title="Digital Brand - Symactive mens walking Shoe"
             price={15.25}
             rating={3}
             image={shoeImage}

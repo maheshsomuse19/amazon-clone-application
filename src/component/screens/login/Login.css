@@ -15,8 +15,10 @@
    height: fit-content;
 }
 .login_logo{
-    width: 100px;
+    /* width: 100px; */
     object-fit: contain;
+    color: #000;
+    font-size: 24px;
 }
 .login_container > h1{
     font-weight: 500;

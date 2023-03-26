@@ -42,7 +42,9 @@ const Login=()=>{
     {/* <Header></Header> */}
     <div className="login">
       <Link to="/">
-      <img className="login_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1280px-Amazon_logo.svg.png" alt="logo"></img>
+      {/* <img className="login_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1280px-Amazon_logo.svg.png" alt="logo"></img> */}
+      <h3 className="login_logo">Digital Store</h3>
+      
       </Link>
       <div className='login_container'>
         <h1 className='signin'>Sign in</h1>
